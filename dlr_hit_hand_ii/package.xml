@@ -1,0 +1,19 @@
+<package>
+  <name>dlr_hit_hand_ii</name>
+  <version>0.0.0</version>
+  <description>
+    ROS meta-package containing dlr_hit_hand_ii pkgs.
+  </description>
+  <maintainer email="exa371@bham.ac.uk">Ermano Arruda</maintainer>
+  <license>GPLv2</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!--> PACKAGES </-->  
+  <run_depend> dlr_description </run_depend>
+  <run_depend> dlr_hit_hand_ii_hw </run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

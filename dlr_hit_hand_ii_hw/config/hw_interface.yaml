@@ -1,0 +1,14 @@
+# make the namespace match the name you use to instantiate the arm in the xacro
+head:
+  root: head_base_link
+  tip: head_right_eye_link
+  # joints is not used, since with the robot name and urdf name conventions, the parsing is hardcoded
+  # but as a general solution, joint names could be loaded as well, like controllers do
+  joints: 
+  - head_neck_pitch_joint
+  - head_neck_roll_joint
+  - head_neck_yaw_joint
+  - head_head_tilt_joint
+  - head_eyes_tilt_joint
+  - head_left_eye_joint
+  - head_right_eye_joint

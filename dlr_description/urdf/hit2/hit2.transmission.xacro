@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="dlr_hit2_finger_transmission" params="name">
+
+		<xacro:property name="Interface10" value="hardware_interface/PositionJointInterface"/>
+		<xacro:property name="Interface30" value="hardware_interface/EffortJointInterface"/>
+
+		<transmission name="${name}_abd_trans">
+			<robotNamespace>${name}</robotNamespace>
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_abd_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+				<!-- <hardwareInterface>${Interface30}</hardwareInterface> -->
+			</joint>
+			<actuator name="${name}_abd_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_inner_trans">
+			<robotNamespace>${name}</robotNamespace>
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_inner_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+				<!-- <hardwareInterface>${Interface30}</hardwareInterface> -->
+			</joint>
+			<actuator name="${name}_inner_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_outer1_trans">
+			<robotNamespace>${name}</robotNamespace>
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_outer1_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+				<!-- <hardwareInterface>${Interface30}</hardwareInterface> -->
+			</joint>
+			<actuator name="${name}_outer1_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_outer2_trans">
+			<robotNamespace>${name}</robotNamespace>
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_outer2_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+				<!-- <hardwareInterface>${Interface30}</hardwareInterface> -->
+			</joint>
+			<actuator name="${name}_outer2_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+    	<!-- TODO: outer transmission has just one motor! -->
+
+    	<!-- one finger only -->
+		<!--<transmission name="${name}_abd_trans" type="pr2_mechanism_model/SimpleTransmission">
+			<actuator name="${name}_abd_motor"/>
+			<joint name="${name}_abd_joint"/>
+			<mechanicalReduction>1</mechanicalReduction>
+		</transmission>
+	
+		<transmission name="${name}_inner_trans" type="pr2_mechanism_model/SimpleTransmission">
+			<actuator name="${name}_inner_motor"/>
+			<joint name="${name}_inner_joint"/>
+			<mechanicalReduction>1</mechanicalReduction>
+		</transmission>
+
+		<transmission name="${name}_outer1_trans" type="pr2_mechanism_model/SimpleTransmission">
+			<actuator name="${name}_outer1_motor"/>
+			<joint name="${name}_outer1_joint"/>
+			<mechanicalReduction>1</mechanicalReduction>
+		</transmission>
+
+		<transmission name="${name}_outer2_trans" type="pr2_mechanism_model/SimpleTransmission">
+			<actuator name="${name}_outer2_motor"/>
+			<joint name="${name}_outer2_joint"/>
+			<mechanicalReduction>1</mechanicalReduction>
+		</transmission>-->
+
+	</xacro:macro>
+
+	<xacro:macro name="dlr_hit2_transmission" params="name">
+		<!-- five equal fingers -->
+
+		<xacro:dlr_hit2_finger_transmission name="thumb" />
+
+		<xacro:dlr_hit2_finger_transmission name="index" />
+
+		<xacro:dlr_hit2_finger_transmission name="middle" />
+
+		<xacro:dlr_hit2_finger_transmission name="ring" />
+
+		<xacro:dlr_hit2_finger_transmission name="pinky" />		
+
+	</xacro:macro>
+
+</robot>

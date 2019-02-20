@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="dlr_hit2">
+
+  <xacro:include filename="$(find dlr_description)/urdf/hit2/hit2_defs.urdf.xacro"/>
+  <xacro:include filename="$(find dlr_description)/urdf/materials.urdf.xacro"/>
+
+  <link name="world_link">
+    <inertial>
+      <mass value="50.0"/>
+      <com xyz="0 0 0"/>
+      <inertia  ixx="0.01" ixy="0.00"  ixz="0.00"
+                iyy="0.01" iyz="0.00"
+                izz="0.01" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0.50" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 1.0"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.50" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <dlr_hit2 parent="world_link" name="right">
+    <origin xyz="0 0 1.0" rpy="0 0 0"/>
+  </dlr_hit2>
+  
+</robot>

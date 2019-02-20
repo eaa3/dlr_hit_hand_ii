@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot>
+
+	<material name="DLR/LightGrey">
+		<color rgba="0.7 0.7 0.7 1.0"/>
+	</material>
+
+	<material name="DLR/DarkGrey">
+		<color rgba="0.4 0.4 0.4 1.0"/>
+	</material>
+
+	<material name="DLR/Black">
+		<color rgba="0.0 0.0 0.0 1.0"/>
+	</material>
+
+	<material name="DLR/DarkGolden">
+		<color rgba="0.4 0.4 0.3 1.0"/>
+	</material>
+
+	<material name="DLR/Blue">
+		<color rgba="0.0 0.0 0.8 1.0"/>
+	</material>
+
+</robot>

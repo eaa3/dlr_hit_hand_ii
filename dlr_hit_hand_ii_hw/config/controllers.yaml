@@ -1,0 +1,85 @@
+head:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100  
+  joint_trajectory_controller:
+    type: position_controllers/JointTrajectoryController
+    joints: 
+      - right_thumb_inner_joint
+      - right_thumb_outer1_joint
+      - right_thumb_outer2_joint
+      - right_index_abd_joint
+      - right_index_inner_joint
+      - right_index_outer1_joint
+      - right_index_outer2_joint
+      - right_middle_abd_joint
+      - right_middle_inner_joint
+      - right_middle_outer1_joint
+      - right_middle_outer2_joint
+      - right_ring_abd_joint
+      - right_ring_inner_joint
+      - right_ring_outer1_joint
+      - right_ring_outer2_joint
+      - right_pinky_abd_joint
+      - right_pinky_inner_joint
+      - right_pinky_outer1_joint
+      - right_pinky_outer2_joint
+
+
+    gains: 
+      right_thumb_inner_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_thumb_outer1_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_thumb_outer2_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_index_abd_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_index_inner_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_index_outer1_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_index_outer2_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_middle_abd_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_middle_inner_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_middle_outer1_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_middle_outer2_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_ring_abd_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_ring_inner_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_ring_outer1_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_ring_outer2_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_pinky_abd_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_pinky_inner_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_pinky_outer1_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+      right_pinky_outer2_joint: {p: 100.0,  d: 10.0, i: 0.1, i_clamp: 1}
+
+
+  # # Position Controllers ---------------------------------------
+  # head_neck_pitch_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_neck_pitch_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
+
+  # head_neck_roll_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_neck_roll_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
+
+  # head_neck_yaw_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_neck_yaw_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
+
+  # head_head_tilt_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_head_tilt_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
+
+  # head_eyes_tilt_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_eyes_tilt_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
+
+  # head_left_eye_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_left_eye_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
+
+  # head_right_eye_joint_position_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: head_right_eye_joint
+  #   pid: {p: 100.0, i: 0.1, d: 10.0}
